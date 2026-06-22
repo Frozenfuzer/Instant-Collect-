@@ -183,7 +183,8 @@ img[data-img]::before, img[data-img]::after{ content:none; }
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(46,38,32,0.08);
 }
-.nav-logo{ font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; color: var(--ink); }
+.nav-logo{ display:flex; align-items:center; font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; color: var(--ink); }
+.nav-logo-img{ height: 40px; width: auto; display: block; }
 .nav-links{ display:flex; align-items:center; gap: clamp(1rem, 2vw, 1.8rem); }
 .nav-links > a{ font-size: 0.92rem; font-weight: 500; color: var(--ink-soft); transition: color 0.2s ease; }
 .nav-links > a:hover, .nav-links > a.is-active{ color: var(--accent); }
@@ -300,7 +301,7 @@ img[data-img]::before, img[data-img]::after{ content:none; }
 .hero-home{ min-height: 100vh; display:flex; flex-direction:column; justify-content:center; }
 .hero-home-grid{
   position:relative; max-width: 1100px; margin:0 auto; width:100%;
-  display:grid; grid-template-columns: 1.1fr 0.9fr; align-items:center; gap: 3rem;
+  display:grid; grid-template-columns: 1.1fr 0.9fr; align-items: flex-start; gap: 3rem;
 }
 .hero-home .hero-content{ text-align:left; align-items:flex-start; }
 
@@ -311,7 +312,7 @@ img[data-img]::before, img[data-img]::after{ content:none; }
 .hero-eyebrow{ font-size: 0.85rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color: var(--accent); }
 .hero-logo{ font-family: var(--font-display); font-size: clamp(3.2rem, 9vw, 5.6rem); line-height: 1.05; color: var(--ink); font-weight:700; }
 .hero-logo:has(.hero-logo-img){ font-size:0; line-height:0; }
-.hero-logo-img{ max-width: 320px; width: 100%; height: auto; display: block; }
+.hero-logo-img{ max-width: 440px; width: 100%; height: auto; display: block; }
 .title-flank-art.has-image{ background-size: contain; background-repeat: no-repeat; }
 .hero-tagline{ color: var(--ink-soft); font-size: 1.08rem; max-width: 48ch; }
 
@@ -345,11 +346,11 @@ img[data-img]::before, img[data-img]::after{ content:none; }
    Au clic : flash de lumière + déchirure + 3 cartes qui s'envolent en éventail.
    ========================================================================== */
 .booster-zone{
-  position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center;
-  gap: 1.4rem; min-height: 420px;
+  position:relative; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
+  gap: 1.4rem; min-height: 420px; padding-top: 1rem;
 }
 .booster-stage{
-  position:relative; width: 100%; max-width: 280px; aspect-ratio: 3/4;
+  position:relative; width: 100%; max-width: 340px; aspect-ratio: 3/4;
   display:flex; align-items:center; justify-content:center;
   perspective: 900px;
 }
@@ -490,7 +491,7 @@ img[data-img]::before, img[data-img]::after{ content:none; }
 
 @media (max-width: 860px){
   .booster-zone{ min-height: 380px; }
-  .booster-stage{ max-width: 230px; }
+  .booster-stage{ max-width: 270px; }
   .booster-card{ width: 92px; height: 128px; margin: -64px 0 0 -46px; }
   .booster-reveal.is-visible .booster-card-1, .booster-reveal.is-settled .booster-card-1{ transform: translate(-92px, -26px) rotate(-14deg) scale(1); }
   .booster-reveal.is-visible .booster-card-2, .booster-reveal.is-settled .booster-card-2{ transform: translate(0px, -50px) rotate(2deg) scale(1.06); }
