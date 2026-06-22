@@ -59,7 +59,7 @@ const IMAGES = {
   ambiance1: "", ambiance2: "", ambiance3: "", ambiance4: "",
 
   // Accueil — preuve sociale (screenshots)
-  screenshot1: "", screenshot2: "", screenshot3: "", screenshot4: "",
+  screenshot1: "", screenshot2: "", screenshot3: "", screenshot4: "", screenshot5: "",
 
   // Concept — 4 étapes
   step1: "", step2: "", step3: "", step4: "",
