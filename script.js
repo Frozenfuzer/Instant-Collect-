@@ -41,7 +41,7 @@ const IMAGES = {
 
   // Accueil — cartes valeurs (photos)
   valuePhoto1: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%202.png",
-  valuePhoto2: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%203%20.jpg",
+  valuePhoto2: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%203%20.png",
   valuePhoto3: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%204.jpg",
 
   // Accueil — grille éditions (à compléter)
