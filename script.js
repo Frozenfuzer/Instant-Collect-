@@ -74,28 +74,52 @@ const IMAGES = {
   valentinHero: "", valentinBooster: "", valentinLivret: "",
 };
 
+// Clés à charger immédiatement (au-dessus de la ligne de flottaison)
+const EAGER_KEYS = new Set([
+  'heroLogo','boosterPackArt','boosterCard1','boosterCard2','boosterCard3',
+  'titleBoostersArt','stepIconCamera','stepIconVignettes','stepIconBoosters','stepIconLivre'
+]);
+
+function setImage(el){
+  const key = el.dataset.img;
+  const url = IMAGES[key];
+  if (!url || url.trim() === "") return;
+  if (el.tagName === 'IMG'){
+    el.src = url;
+  } else {
+    el.style.backgroundImage = `url("${url}")`;
+  }
+  el.classList.add("has-image");
+}
+
 function applyImages(){
-  // Conteneurs génériques (div, etc.) : image en background, cadre "à venir" sinon
-  document.querySelectorAll("[data-img]:not(img)").forEach((el) => {
+  const lazyEls = [];
+
+  document.querySelectorAll("[data-img]").forEach((el) => {
     const key = el.dataset.img;
-    const url = IMAGES[key];
-    if (url && url.trim() !== ""){
-      el.style.backgroundImage = `url("${url}")`;
-      el.classList.add("has-image");
+    if (!key) return;
+    if (EAGER_KEYS.has(key)){
+      setImage(el); // chargement immédiat
     } else {
-      el.style.backgroundImage = "";
-      el.classList.remove("has-image");
+      lazyEls.push(el); // lazy
     }
   });
-  // Balises <img> (booster) : on fixe directement la source
-  document.querySelectorAll("img[data-img]").forEach((el) => {
-    const key = el.dataset.img;
-    const url = IMAGES[key];
-    if (url && url.trim() !== ""){
-      el.src = url;
-      el.classList.add("has-image");
-    }
-  });
+
+  // Lazy loading via IntersectionObserver
+  if ('IntersectionObserver' in window){
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting){
+          setImage(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '200px 0px' }); // commence à charger 200px avant d'être visible
+    lazyEls.forEach(el => observer.observe(el));
+  } else {
+    // Fallback navigateurs anciens
+    lazyEls.forEach(el => setImage(el));
+  }
 }
 
 /* --------------------------------------------------------------------------
