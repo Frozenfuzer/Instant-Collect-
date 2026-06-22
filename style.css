@@ -655,8 +655,7 @@ img[data-img]::before, img[data-img]::after{ content:none; }
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .produit-card:hover{ transform: translateY(-6px); box-shadow: 0 18px 36px rgba(46,38,32,0.16); }
-.produit-visual{ height: 240px; background-size: cover; background-position: center; margin-bottom: 10px; transition: transform 0.4s ease; transform-origin: top center; }
-/* zoom au survol — le bas de l'image descend pile sur le bloc blanc */
+.produit-visual{ height: 240px; background-size: contain; background-position: center; background-repeat: no-repeat; background-color: var(--cream-warm); margin-bottom: 10px; transition: transform 0.4s ease; transform-origin: top center; }
 .produit-card:hover .produit-visual{ transform: scale(1.042); }
 .produit-body{ padding: 1.5rem; display:flex; flex-direction:column; gap:0.6rem; flex:1; position:relative; z-index:1; background:var(--white); }
 .produit-title{ font-size: 1.2rem; font-weight:700; }
