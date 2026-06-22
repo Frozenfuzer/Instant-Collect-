@@ -59,7 +59,11 @@ const IMAGES = {
   ambiance1: "", ambiance2: "", ambiance3: "", ambiance4: "",
 
   // Accueil — preuve sociale (screenshots)
-  screenshot1: "", screenshot2: "", screenshot3: "", screenshot4: "", screenshot5: "",
+  screenshot1: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/PHOTO%2011.PNG",
+  screenshot2: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/PHOTO%2012.PNG",
+  screenshot3: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/PHOTO%2013.PNG",
+  screenshot4: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/PHOTO%2014.PNG",
+  screenshot5: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/PHOTO%2015.jpg",
 
   // Concept — 4 étapes
   step1: "", step2: "", step3: "", step4: "",
