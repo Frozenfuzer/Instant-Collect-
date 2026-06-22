@@ -1136,6 +1136,18 @@ body[data-page="contact"]{ --accent: var(--terracotta); }
 .hero-partenaires .hero-tagline{ color: var(--ink); }
 .hero-partenaires .edition-title{ color: var(--ink); }
 /* ===================== PREUVE SOCIALE — screenshots conversations ===================== */
+@keyframes sp-sway {
+  0%, 100% { transform: rotate(-5deg) translateY(0); }
+  50% { transform: rotate(5deg) translateY(-7px); }
+}
+@keyframes sp-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(8deg); }
+}
+@keyframes sp-pulse-slow {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.9; }
+  50% { transform: scale(1.12) rotate(12deg); opacity: 1; }
+}
 .social-proof{
   background: var(--white);
   padding: clamp(3rem,6vw,5rem) 1.5rem clamp(2.5rem,5vw,4rem);
@@ -1153,15 +1165,60 @@ body[data-page="contact"]{ --accent: var(--terracotta); }
   font-weight: 400;
   color: var(--terracotta);
 }
-.screenshots-grid{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.4rem;
-  max-width: 1100px;
+
+/* Wrapper avec décos positionnées */
+.sp-wrap{
+  position: relative;
+  max-width: 960px;
   margin: 0 auto 2rem;
+  padding: 1rem 2rem 2rem;
 }
-@media (max-width: 900px){ .screenshots-grid{ grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px){ .screenshots-grid{ grid-template-columns: 1fr; max-width: 340px; } }
+
+/* Décorations botaniques */
+.sp-deco{ position: absolute; pointer-events: none; z-index: 0; }
+.sp-leaf-1{
+  width: 90px; top: -10px; left: -20px;
+  animation: sp-sway 7s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+.sp-flower-1{
+  width: 52px; top: 20px; right: -10px;
+  animation: sp-float 5.5s ease-in-out infinite;
+}
+.sp-branch-1{
+  width: 110px; bottom: 30px; right: -30px;
+  animation: sp-float 9s ease-in-out infinite 1s;
+  transform-origin: left center;
+}
+.sp-leaf-2{
+  width: 60px; bottom: 20px; left: -15px;
+  transform: rotate(40deg);
+  animation: sp-sway 8s ease-in-out infinite reverse;
+  transform-origin: bottom center;
+}
+.sp-flower-2{
+  width: 46px; top: 48%; right: 4%;
+  animation: sp-pulse-slow 6s ease-in-out infinite;
+}
+.sp-dots-1{
+  width: 56px; top: 15%; left: 5%;
+  animation: sp-float 7s ease-in-out infinite 2s;
+}
+
+/* Grilles */
+.sp-row{ position: relative; z-index: 1; }
+.sp-row-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 580px;
+  margin: 0 auto 1.8rem;
+}
+.sp-row-3{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
 
 .screenshot-card{
   display: flex;
@@ -1171,10 +1228,10 @@ body[data-page="contact"]{ --accent: var(--terracotta); }
 }
 .screenshot-img-wrap{
   width: 100%;
-  aspect-ratio: 9 / 16;   /* format portrait smartphone */
+  aspect-ratio: 9 / 16;
   background: var(--cream);
   border: 1px solid rgba(46,38,32,0.1);
-  border-radius: 16px;     /* coins arrondis style téléphone */
+  border-radius: 16px;
   overflow: hidden;
   position: relative;
   box-shadow: 0 4px 18px rgba(46,38,32,0.1);
@@ -1184,22 +1241,9 @@ body[data-page="contact"]{ --accent: var(--terracotta); }
   transform: translateY(-4px) scale(1.02);
   box-shadow: 0 10px 30px rgba(46,38,32,0.15);
 }
-/* Image injectée via applyImages() */
 .screenshot-img-wrap img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-}
-/* Placeholder quand pas encore d'image */
-.screenshot-img-wrap[data-img-empty]::before{
-  content: "📱";
-  font-size: 2rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  opacity: 0.3;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top;
 }
 .screenshot-caption{
   font-size: 0.78rem;
@@ -1213,6 +1257,11 @@ body[data-page="contact"]{ --accent: var(--terracotta); }
   color: var(--ink-soft);
   margin-top: 0.5rem;
   font-style: italic;
+}
+@media (max-width: 700px){
+  .sp-row-2{ grid-template-columns: 1fr; max-width: 280px; }
+  .sp-row-3{ grid-template-columns: 1fr; max-width: 280px; margin: 0 auto; }
+  .sp-leaf-1, .sp-branch-1, .sp-leaf-2, .sp-flower-2, .sp-dots-1{ display: none; }
 }
 
 /* ===================== TICKER HAUT — suppression ===================== */
