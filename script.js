@@ -45,11 +45,11 @@ const IMAGES = {
   valuePhoto3: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%204.jpg",
 
   // Accueil — grille éditions (à compléter)
-  editionHistoireAmour: "",
+  editionHistoireAmour: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%204.jpg",
   editionSouvenirs:     "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%205.png",
   editionEte:           "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%206.png",
   editionKing:          "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%208.png",
-  editionMariage:       "",
+  editionMariage:       "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%207.png",
   editionPeres:         "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%209.png",
 
   // Accueil — bandeau vedette
