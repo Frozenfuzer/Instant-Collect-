@@ -22,7 +22,7 @@ const ORDER_LINK = "https://www.instagram.com/instant_collecte/";
    -------------------------------------------------------------------------- */
 const IMAGES = {
   // Logo hero accueil
-  heroLogo: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%201.png",
+  heroLogo: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%201%20modif.png",
 
   // Accueil — titre "Comment ça fonctionne ?" flanqué des 3 mini boosters
   titleBoostersArt: "https://frozenfuzer.github.io/Instant-Collect-/assets/icones/3%20mini%20booster.jpeg",
