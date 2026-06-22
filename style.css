@@ -1210,14 +1210,16 @@ body[data-page="contact"]{ --accent: var(--terracotta); }
 .sp-row-2{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  max-width: 580px;
-  margin: 0 auto 1.8rem;
+  gap: 1.2rem;
+  max-width: 380px;
+  margin: 0 auto 1.5rem;
 }
 .sp-row-3{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1.5rem;
+  gap: 1.2rem;
+  max-width: 560px;
+  margin: 0 auto;
 }
 
 .screenshot-card{
