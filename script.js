@@ -39,6 +39,11 @@ const IMAGES = {
   boosterCard2:   "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Mini%20image%20booster%20mystere%20Julian%20et%20mami.jpeg",
   boosterCard3:   "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Mini%20image%20booster%20mystere%20mariage.jpeg",
 
+  // Accueil — cartes valeurs (photos)
+  valuePhoto1: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%202.png",
+  valuePhoto2: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%203.jpg",
+  valuePhoto3: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%204.jpg",
+
   // Accueil — grille éditions (à compléter)
   editionHistoireAmour: "",
   editionSouvenirs:     "",
