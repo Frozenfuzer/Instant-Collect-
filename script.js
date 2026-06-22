@@ -46,8 +46,8 @@ const IMAGES = {
 
   // Accueil — grille éditions (à compléter)
   editionHistoireAmour: "",
-  editionSouvenirs:     "",
-  editionEte:           "",
+  editionSouvenirs:     "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%205.png",
+  editionEte:           "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%206.png",
   editionKing:          "",
   editionMariage:       "",
   editionPeres:         "",
