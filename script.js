@@ -48,9 +48,9 @@ const IMAGES = {
   editionHistoireAmour: "",
   editionSouvenirs:     "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%205.png",
   editionEte:           "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%206.png",
-  editionKing:          "",
+  editionKing:          "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%208.png",
   editionMariage:       "",
-  editionPeres:         "",
+  editionPeres:         "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%209.png",
 
   // Accueil — bandeau vedette
   editionMeresHero: "",
