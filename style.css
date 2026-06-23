@@ -1214,7 +1214,7 @@ body[data-page="contact"]{ --accent: var(--terracotta); }
   box-shadow: 0 4px 14px rgba(46,38,32,0.09);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-size: contain;
-  background-position: top center;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 .screenshot-img-wrap:hover{
