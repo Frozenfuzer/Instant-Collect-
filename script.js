@@ -446,4 +446,43 @@ renderRoute();
   });
   form.querySelectorAll(".form-input").forEach((i) => i.addEventListener("input", () => i.classList.remove("is-invalid")));
 })();
+
+/* ---------- Carousel preuve sociale ---------- */
+function initCarousel(){
+  const track = document.querySelector('.sp-track');
+  if(!track) return;
+  const cards = Array.from(track.querySelectorAll('.screenshot-card'));
+  const prevBtn = document.querySelector('.sp-prev');
+  const nextBtn = document.querySelector('.sp-next');
+  const dotsWrap = document.getElementById('spDots');
+  const visible = window.innerWidth <= 640 ? 1 : 3;
+  const max = cards.length - visible;
+  let current = 0;
+
+  if(dotsWrap){
+    dotsWrap.innerHTML = '';
+    for(let i = 0; i <= max; i++){
+      const dot = document.createElement('button');
+      dot.className = 'sp-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Avis ' + (i+1));
+      dot.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(dot);
+    }
+  }
+
+  function goTo(index){
+    current = Math.max(0, Math.min(max, index));
+    const cardWidth = cards[0].offsetWidth + 16;
+    track.style.transform = 'translateX(-' + (current * cardWidth) + 'px)';
+    if(prevBtn) prevBtn.disabled = current === 0;
+    if(nextBtn) nextBtn.disabled = current === max;
+    document.querySelectorAll('.sp-dot').forEach(function(d, i){ d.classList.toggle('active', i === current); });
+  }
+
+  if(prevBtn) prevBtn.addEventListener('click', function(){ goTo(current - 1); });
+  if(nextBtn) nextBtn.addEventListener('click', function(){ goTo(current + 1); });
+  goTo(0);
+}
+document.addEventListener('DOMContentLoaded', function(){ initCarousel(); });
+
 if (typeof applyImages === "function") applyImages();
