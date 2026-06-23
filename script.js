@@ -529,19 +529,4 @@ function initCarousel(){
 }
 document.addEventListener('DOMContentLoaded', function(){ initCarousel(); });
 
-/* ---------- Blob organique concept section ---------- */
-function initBlob(){
-  const blob = document.querySelector('.concept-blob');
-  if(!blob) return;
-  const section = document.querySelector('.concept-brief');
-  if(!section) return;
-  const observer = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      blob.classList.toggle('blob-visible', entry.isIntersecting);
-    });
-  }, { threshold: 0.15 });
-  observer.observe(section);
-}
-document.addEventListener('DOMContentLoaded', initBlob);
-
 if (typeof applyImages === "function") applyImages();
