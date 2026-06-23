@@ -1150,7 +1150,7 @@ body[data-page="contact"]{ --accent: var(--terracotta); }
 }
 .social-proof{
   background: var(--white);
-  padding: clamp(3rem,6vw,5rem) 1.5rem clamp(2.5rem,5vw,4rem);
+  padding: clamp(2rem,4vw,3rem) 1.5rem clamp(1.5rem,3vw,2.5rem);
   text-align: center;
 }
 .social-proof .section-header{ margin-bottom: 2.5rem; }
@@ -1210,15 +1210,15 @@ body[data-page="contact"]{ --accent: var(--terracotta); }
 .sp-row-2{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.2rem;
-  max-width: 380px;
+  gap: 1.5rem;
+  max-width: 580px;
   margin: 0 auto 1.5rem;
 }
 .sp-row-3{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1.2rem;
-  max-width: 560px;
+  gap: 1.5rem;
+  max-width: 860px;
   margin: 0 auto;
 }
 
