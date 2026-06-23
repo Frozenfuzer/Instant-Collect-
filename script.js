@@ -81,7 +81,8 @@ const IMAGES = {
 // Clés à charger immédiatement (au-dessus de la ligne de flottaison)
 const EAGER_KEYS = new Set([
   'heroLogo','boosterPackArt','boosterCard1','boosterCard2','boosterCard3',
-  'titleBoostersArt','stepIconCamera','stepIconVignettes','stepIconBoosters','stepIconLivre'
+  'titleBoostersArt','stepIconCamera','stepIconVignettes','stepIconBoosters','stepIconLivre',
+  'screenshot1','screenshot2','screenshot3','screenshot4','screenshot5'
 ]);
 
 function setImage(el){
