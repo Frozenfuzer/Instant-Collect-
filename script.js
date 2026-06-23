@@ -56,9 +56,9 @@ const IMAGES = {
   editionMeresHero: "",
 
   // Accueil — ambiance (polaroids)
-  ambiance1: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%2010.jpg",
-  ambiance2: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%209.png",
-  ambiance3: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%202.png",
+  ambiance1: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%202.png",
+  ambiance2: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%2010.jpg",
+  ambiance3: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%209.png",
   ambiance4: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/Photo%205.png",
 
   // Accueil — preuve sociale (screenshots)
