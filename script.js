@@ -122,7 +122,7 @@ function applyImages(){
           observer.unobserve(entry.target);
         }
       });
-    }, { rootMargin: '200px 0px' }); // commence à charger 200px avant d'être visible
+    }, { rootMargin: '400px 0px' }); // commence à charger 400px avant d'être visible
     lazyEls.forEach(el => observer.observe(el));
   } else {
     // Fallback navigateurs anciens
