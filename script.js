@@ -447,7 +447,7 @@ renderRoute();
   form.querySelectorAll(".form-input").forEach((i) => i.addEventListener("input", () => i.classList.remove("is-invalid")));
 })();
 
-/* ---------- Carousel preuve sociale ---------- */
+/* ---------- Carousel preuve sociale — infinite ---------- */
 function initCarousel(){
   const track = document.querySelector('.sp-track');
   if(!track) return;
@@ -456,8 +456,10 @@ function initCarousel(){
   const nextBtn = document.querySelector('.sp-next');
   const dotsWrap = document.getElementById('spDots');
   const visible = window.innerWidth <= 640 ? 1 : 3;
-  const max = cards.length - visible;
+  const total = cards.length;
+  const max = total - visible;
   let current = 0;
+  let animating = false;
 
   if(dotsWrap){
     dotsWrap.innerHTML = '';
@@ -465,22 +467,64 @@ function initCarousel(){
       const dot = document.createElement('button');
       dot.className = 'sp-dot' + (i === 0 ? ' active' : '');
       dot.setAttribute('aria-label', 'Avis ' + (i+1));
-      dot.addEventListener('click', () => goTo(i));
+      dot.addEventListener('click', function(){ goTo(i); });
       dotsWrap.appendChild(dot);
     }
   }
 
-  function goTo(index){
-    current = Math.max(0, Math.min(max, index));
-    const cardWidth = cards[0].offsetWidth + 16;
-    track.style.transform = 'translateX(-' + (current * cardWidth) + 'px)';
-    if(prevBtn) prevBtn.disabled = current === 0;
-    if(nextBtn) nextBtn.disabled = current === max;
+  function getCardWidth(){ return cards[0].offsetWidth + 16; }
+
+  function updateDots(){
     document.querySelectorAll('.sp-dot').forEach(function(d, i){ d.classList.toggle('active', i === current); });
   }
 
-  if(prevBtn) prevBtn.addEventListener('click', function(){ goTo(current - 1); });
-  if(nextBtn) nextBtn.addEventListener('click', function(){ goTo(current + 1); });
+  function goTo(index, instant){
+    current = ((index % (max+1)) + (max+1)) % (max+1);
+    var tx = current * getCardWidth();
+    if(instant){ track.style.transition = 'none'; } else { track.style.transition = 'transform 0.4s ease'; }
+    track.style.transform = 'translateX(-' + tx + 'px)';
+    updateDots();
+  }
+
+  function goNext(){
+    if(animating) return;
+    if(current >= max){
+      // Sauter à la fin, puis revenir au début sans animation
+      animating = true;
+      track.style.transition = 'none';
+      track.style.transform = 'translateX(-' + (current * getCardWidth()) + 'px)';
+      setTimeout(function(){
+        track.style.transition = 'transform 0.4s ease';
+        current = 0;
+        track.style.transform = 'translateX(0)';
+        updateDots();
+        setTimeout(function(){ animating = false; }, 420);
+      }, 20);
+    } else {
+      goTo(current + 1);
+    }
+  }
+
+  function goPrev(){
+    if(animating) return;
+    if(current <= 0){
+      animating = true;
+      track.style.transition = 'none';
+      track.style.transform = 'translateX(0)';
+      setTimeout(function(){
+        track.style.transition = 'transform 0.4s ease';
+        current = max;
+        track.style.transform = 'translateX(-' + (max * getCardWidth()) + 'px)';
+        updateDots();
+        setTimeout(function(){ animating = false; }, 420);
+      }, 20);
+    } else {
+      goTo(current - 1);
+    }
+  }
+
+  if(prevBtn) prevBtn.addEventListener('click', goPrev);
+  if(nextBtn) nextBtn.addEventListener('click', goNext);
   goTo(0);
 }
 document.addEventListener('DOMContentLoaded', function(){ initCarousel(); });
