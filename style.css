@@ -636,7 +636,7 @@ img[data-img]::before, img[data-img]::after{ content:none; }
   position: relative;
   max-width: 1080px;
   margin: clamp(1rem, 3vw, 2rem) auto 0;
-  padding: clamp(1.5rem, 3vw, 2.5rem) clamp(2rem, 5vw, 4rem) clamp(8rem, 13vw, 12rem) clamp(0.5rem, 2vw, 1.5rem);
+  padding: clamp(1.5rem, 3vw, 2.5rem) clamp(2rem, 5vw, 4rem) clamp(11rem, 16vw, 15rem) clamp(0.5rem, 2vw, 1.5rem);
   min-height: 320px;
   display: grid;
   grid-template-columns: 46% 54%;
@@ -681,7 +681,7 @@ img[data-img]::before, img[data-img]::after{ content:none; }
 .concept-nostalgie-arrow {
   position: absolute;
   left: 9%;
-  bottom: 3.2rem;
+  bottom: 5.5rem;
   width: 60%;
   transform: rotate(-1deg);
   height: 120px;
