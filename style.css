@@ -683,7 +683,7 @@ img[data-img]::before, img[data-img]::after{ content:none; }
   left: 9%;
   bottom: 3.2rem;
   width: 60%;
-  transform: rotate(-5deg);
+  transform: rotate(3deg);
   height: 120px;
   opacity: 0.92;
   pointer-events: none;
