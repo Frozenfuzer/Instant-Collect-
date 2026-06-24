@@ -654,7 +654,7 @@ img[data-img]::before, img[data-img]::after{ content:none; }
 
 .concept-nostalgie-title {
   font-family: var(--font-ui);
-  font-size: clamp(1.45rem, 2.1vw, 1.85rem);
+  font-size: clamp(1.15rem, 1.6vw, 1.45rem);
   font-weight: 800;
   color: var(--ink);
   line-height: 1.22;
@@ -683,7 +683,7 @@ img[data-img]::before, img[data-img]::after{ content:none; }
   left: 9%;
   bottom: 3.2rem;
   width: 60%;
-  transform: rotate(3deg);
+  transform: rotate(-1deg);
   height: 120px;
   opacity: 0.92;
   pointer-events: none;
