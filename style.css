@@ -686,7 +686,7 @@ img[data-img]::before, img[data-img]::after{ content:none; }
 }
 .concept-nostalgie-arrow svg {
   display: block;
-  width: 110px;
+  width: 130px;
   height: auto;
   opacity: 0.9;
 }
@@ -716,24 +716,18 @@ img[data-img]::before, img[data-img]::after{ content:none; }
   background-position: center;
   background-color: var(--cream-warm);
   box-shadow: 0 12px 30px rgba(46,38,32,0.22);
-  opacity: 0;
-  transform: scale(0.3) rotate(0deg);
-  transition: transform 0.62s cubic-bezier(.16,.84,.32,1.24), opacity 0.4s ease;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, z-index 0s;
 }
 
-.nostalgie-photo-1 { transition-delay: 0.08s; z-index: 1; }
-.nostalgie-photo-2 { transition-delay: 0.18s; z-index: 2; }
-.nostalgie-photo-3 { transition-delay: 0.28s; z-index: 3; }
+/* positions d'éventail (état permanent) */
+.nostalgie-photo-1 { z-index: 1; transform: translate(-92px, -16px) rotate(-12deg); }
+.nostalgie-photo-2 { z-index: 2; transform: translate(0px,   -34px) rotate(-2deg) scale(1.04); }
+.nostalgie-photo-3 { z-index: 3; transform: translate(92px,  -10px) rotate(11deg); }
 
-.nostalgie-photo-1.is-visible { opacity: 1; transform: translate(-92px, -16px) rotate(-12deg) scale(1); }
-.nostalgie-photo-2.is-visible { opacity: 1; transform: translate(0px,   -34px) rotate(-2deg) scale(1.04); }
-.nostalgie-photo-3.is-visible { opacity: 1; transform: translate(92px,  -10px) rotate(11deg) scale(1); }
-
-.nostalgie-photo:hover {
-  z-index: 10;
-  box-shadow: 0 18px 40px rgba(46,38,32,0.26);
-  transition: box-shadow 0.22s ease;
-}
+/* zoom au survol — on garde la rotation de chaque carte, on ajoute le scale */
+.nostalgie-photo-1:hover { z-index: 10; transform: translate(-92px, -16px) rotate(-12deg) scale(1.1); box-shadow: 0 20px 44px rgba(46,38,32,0.3); }
+.nostalgie-photo-2:hover { z-index: 10; transform: translate(0px,   -34px) rotate(-2deg)  scale(1.14); box-shadow: 0 20px 44px rgba(46,38,32,0.3); }
+.nostalgie-photo-3:hover { z-index: 10; transform: translate(92px,  -10px) rotate(11deg)  scale(1.1); box-shadow: 0 20px 44px rgba(46,38,32,0.3); }
 
 /* ── Mobile ── */
 @media (max-width: 760px) {
@@ -765,9 +759,12 @@ img[data-img]::before, img[data-img]::after{ content:none; }
     width: 118px;
     height: 165px;
   }
-  .nostalgie-photo-1.is-visible { transform: translate(-66px, -12px) rotate(-12deg) scale(1); }
-  .nostalgie-photo-2.is-visible { transform: translate(0px,   -24px) rotate(-2deg) scale(1.04); }
-  .nostalgie-photo-3.is-visible { transform: translate(66px,  -8px)  rotate(11deg) scale(1); }
+  .nostalgie-photo-1 { transform: translate(-66px, -12px) rotate(-12deg); }
+  .nostalgie-photo-2 { transform: translate(0px,   -24px) rotate(-2deg) scale(1.04); }
+  .nostalgie-photo-3 { transform: translate(66px,  -8px)  rotate(11deg); }
+  .nostalgie-photo-1:hover { transform: translate(-66px, -12px) rotate(-12deg) scale(1.1); }
+  .nostalgie-photo-2:hover { transform: translate(0px,   -24px) rotate(-2deg)  scale(1.14); }
+  .nostalgie-photo-3:hover { transform: translate(66px,  -8px)  rotate(11deg)  scale(1.1); }
 }
 
 /* ===================== FAQ ===================== */
