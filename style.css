@@ -680,9 +680,9 @@ img[data-img]::before, img[data-img]::after{ content:none; }
 
 .concept-nostalgie-arrow {
   position: absolute;
-  left: 34%;
+  left: 41%;
   bottom: 1rem;
-  width: 38%;
+  width: 31%;
   height: 120px;
   opacity: 0.92;
   pointer-events: none;
@@ -717,14 +717,14 @@ img[data-img]::before, img[data-img]::after{ content:none; }
 }
 
 /* positions d'éventail (permanentes) — peu penchées, chevauchement ~5% */
-.concept-fan-anchor > .nostalgie-photo-1 { z-index: 1; transform: translate(-158px, -20px) rotate(-7deg); }
-.concept-fan-anchor > .nostalgie-photo-2 { z-index: 3; transform: translate(0,       14px) rotate(0deg) scale(1.04); }
-.concept-fan-anchor > .nostalgie-photo-3 { z-index: 2; transform: translate(158px,  -20px) rotate(7deg); }
+.concept-fan-anchor > .nostalgie-photo-1 { z-index: 1; transform: translate(-152px, -20px) rotate(-7deg); }
+.concept-fan-anchor > .nostalgie-photo-2 { z-index: 2; transform: translate(-4px,    14px) rotate(0deg) scale(1.04); }
+.concept-fan-anchor > .nostalgie-photo-3 { z-index: 3; transform: translate(148px,  -20px) rotate(7deg); }
 
 /* zoom au survol */
-.concept-fan-anchor > .nostalgie-photo-1:hover { z-index: 10; transform: translate(-158px, -20px) rotate(-7deg) scale(1.08); box-shadow: 0 22px 48px rgba(46,38,32,0.32); }
-.concept-fan-anchor > .nostalgie-photo-2:hover { z-index: 10; transform: translate(0,       14px) rotate(0deg)  scale(1.12); box-shadow: 0 22px 48px rgba(46,38,32,0.32); }
-.concept-fan-anchor > .nostalgie-photo-3:hover { z-index: 10; transform: translate(158px,  -20px) rotate(7deg)  scale(1.08); box-shadow: 0 22px 48px rgba(46,38,32,0.32); }
+.concept-fan-anchor > .nostalgie-photo-1:hover { z-index: 10; transform: translate(-152px, -20px) rotate(-7deg) scale(1.08); box-shadow: 0 22px 48px rgba(46,38,32,0.32); }
+.concept-fan-anchor > .nostalgie-photo-2:hover { z-index: 10; transform: translate(-4px,    14px) rotate(0deg)  scale(1.12); box-shadow: 0 22px 48px rgba(46,38,32,0.32); }
+.concept-fan-anchor > .nostalgie-photo-3:hover { z-index: 10; transform: translate(148px,  -20px) rotate(7deg)  scale(1.08); box-shadow: 0 22px 48px rgba(46,38,32,0.32); }
 
 /* masque les libellés "image à venir" sur ces cartes une fois la vraie image posée */
 .concept-fan-anchor > .nostalgie-photo.has-image::before,
