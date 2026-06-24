@@ -679,15 +679,14 @@ img[data-img]::before, img[data-img]::after{ content:none; }
 }
 
 .concept-nostalgie-arrow {
-  position: absolute;
-  left: 9%;
-  bottom: -0.4rem;
-  width: 60%;
+  display: block;
+  margin-top: -11px;
+  width: 420px;
+  height: 100px;
   transform: rotate(-1deg);
-  height: 120px;
+  transform-origin: left center;
   opacity: 0.92;
-  pointer-events: none;
-  z-index: 0;
+  overflow: visible;
 }
 
 /* ── Fan de cartes : conteneur dédié dans la 2e colonne ── */
