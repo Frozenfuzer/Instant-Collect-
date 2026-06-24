@@ -634,37 +634,41 @@ img[data-img]::before, img[data-img]::after{ content:none; }
 
 /* ── Concept — intro nostalgie ── */
 .concept-nostalgie {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 2rem;
+  position: relative;          /* ancre de référence pour le fan */
   max-width: 1060px;
-  margin: clamp(2.5rem, 6vw, 4rem) auto 0;
-  padding: 0 clamp(2rem, 5vw, 5rem) var(--section-pad);
+  margin: clamp(2rem, 5vw, 3.5rem) auto 0;
+  padding: 2rem 3rem var(--section-pad);
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
 }
 
+/* Colonne texte : occupe 44% à gauche */
 .concept-nostalgie-text {
+  width: 44%;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  min-width: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .concept-nostalgie-title {
   font-family: var(--font-ui);
-  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  font-size: clamp(1.3rem, 1.8vw, 1.65rem);
   font-weight: 800;
   color: var(--ink);
   line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  max-width: 18ch;
   margin: 0.4rem 0 0.2rem;
 }
 
 .concept-nostalgie-subtitle {
   font-family: var(--font-display);
-  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+  font-size: clamp(1.05rem, 1.5vw, 1.3rem);
   color: var(--accent);
   font-weight: 700;
   line-height: 1.3;
@@ -672,59 +676,58 @@ img[data-img]::before, img[data-img]::after{ content:none; }
 
 .concept-nostalgie-body {
   color: var(--ink-soft);
-  font-size: 0.97rem;
+  font-size: 0.96rem;
   line-height: 1.68;
-  max-width: 40ch;
 }
 
-/* ── Flèche ── */
 .concept-nostalgie-arrow {
-  margin-top: 0.4rem;
-  width: 68px;
-  opacity: 0.72;
+  margin-top: 0.8rem;
+  line-height: 0;
+}
+.concept-nostalgie-arrow svg {
+  display: block;
+  width: 110px;
+  height: auto;
+  opacity: 0.9;
 }
 
-/* ── Fan de 3 cartes — ancrage identique au booster accueil ── */
-.concept-nostalgie-collage {
-  position: relative;
-  height: 380px;
-  min-width: 0;
-}
-
+/* ── Fan : ancre positionnée au centre de la moitié droite ── */
+/* left = 44% (texte) + 56%/2 = 44+28 = 72% du conteneur     */
 .concept-fan-anchor {
   position: absolute;
-  top: 58%;
-  left: 50%;
+  top: 50%;
+  left: 71%;
   width: 1px;
   height: 1px;
+  display: block;
 }
 
 .nostalgie-photo {
   position: absolute;
   top: 0;
   left: 0;
-  width: 162px;
-  height: 226px;
-  margin-top: -113px;
-  margin-left: -81px;
-  border-radius: 10px;
-  outline: 1.8px solid rgba(30, 20, 10, 0.60);
+  width: 168px;
+  height: 234px;
+  margin-top: -117px;
+  margin-left: -84px;
+  border-radius: 12px;
+  outline: 3px solid #2E2620;
   background-size: cover;
   background-position: center;
   background-color: var(--cream-warm);
-  box-shadow: 0 10px 26px rgba(46,38,32,0.18);
+  box-shadow: 0 12px 30px rgba(46,38,32,0.22);
   opacity: 0;
   transform: scale(0.3) rotate(0deg);
   transition: transform 0.62s cubic-bezier(.16,.84,.32,1.24), opacity 0.4s ease;
 }
 
-.nostalgie-photo-1 { transition-delay: 0.08s; }
+.nostalgie-photo-1 { transition-delay: 0.08s; z-index: 1; }
 .nostalgie-photo-2 { transition-delay: 0.18s; z-index: 2; }
-.nostalgie-photo-3 { transition-delay: 0.28s; }
+.nostalgie-photo-3 { transition-delay: 0.28s; z-index: 3; }
 
-.nostalgie-photo-1.is-visible { opacity: 1; transform: translate(-148px, -42px) rotate(-14deg) scale(1); }
-.nostalgie-photo-2.is-visible { opacity: 1; transform: translate(0px,   -80px) rotate(2deg)   scale(1.06); }
-.nostalgie-photo-3.is-visible { opacity: 1; transform: translate(148px, -42px) rotate(15deg)  scale(1); }
+.nostalgie-photo-1.is-visible { opacity: 1; transform: translate(-92px, -16px) rotate(-12deg) scale(1); }
+.nostalgie-photo-2.is-visible { opacity: 1; transform: translate(0px,   -34px) rotate(-2deg) scale(1.04); }
+.nostalgie-photo-3.is-visible { opacity: 1; transform: translate(92px,  -10px) rotate(11deg) scale(1); }
 
 .nostalgie-photo:hover {
   z-index: 10;
@@ -735,22 +738,36 @@ img[data-img]::before, img[data-img]::after{ content:none; }
 /* ── Mobile ── */
 @media (max-width: 760px) {
   .concept-nostalgie {
-    grid-template-columns: 1fr;
-    gap: 0;
-    padding: 0 1.5rem var(--section-pad);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem 0;
+    min-height: 0;
   }
-  .concept-nostalgie-title { max-width: none; font-size: 1.3rem; }
-  .concept-nostalgie-body  { max-width: none; }
-  .concept-nostalgie-collage { height: 280px; }
+  .concept-nostalgie-text {
+    width: 100%;
+  }
+  .concept-fan-anchor {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: block;
+    width: 100%;
+    height: 280px;
+    margin: 2rem 0 var(--section-pad);
+  }
+  /* en mobile : ancre au centre du bloc */
   .nostalgie-photo {
-    width: 115px;
-    height: 161px;
-    margin-top: -80px;
-    margin-left: -57px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -82px;
+    margin-left: -59px;
+    width: 118px;
+    height: 165px;
   }
-  .nostalgie-photo-1.is-visible { transform: translate(-105px, -30px) rotate(-14deg) scale(1); }
-  .nostalgie-photo-2.is-visible { transform: translate(0px,    -56px) rotate(2deg)   scale(1.06); }
-  .nostalgie-photo-3.is-visible { transform: translate(105px, -30px) rotate(15deg)  scale(1); }
+  .nostalgie-photo-1.is-visible { transform: translate(-66px, -12px) rotate(-12deg) scale(1); }
+  .nostalgie-photo-2.is-visible { transform: translate(0px,   -24px) rotate(-2deg) scale(1.04); }
+  .nostalgie-photo-3.is-visible { transform: translate(66px,  -8px)  rotate(11deg) scale(1); }
 }
 
 /* ===================== FAQ ===================== */
