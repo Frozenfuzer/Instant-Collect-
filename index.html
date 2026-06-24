@@ -433,7 +433,6 @@
   <div class="concept-nostalgie">
 
     <div class="concept-nostalgie-text reveal">
-      <p class="section-eyebrow">Pour qui découvre la marque</p>
       <h1 class="concept-nostalgie-title">Vous vous souvenez des vignettes à collectionner&nbsp;?</h1>
       <p class="concept-nostalgie-body">
         On ouvrait des boosters, on découvrait les cartes et on les collait dans son album.
@@ -447,10 +446,14 @@
 
     <!-- Flèche longue reliant le texte aux cartes -->
     <svg class="concept-nostalgie-arrow" viewBox="0 0 520 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="none">
-      <path d="M14 150 C 70 110, 150 200, 320 188 C 420 180, 460 90, 478 40"
-            stroke="#2E2620" stroke-width="4" stroke-linecap="round"/>
-      <path d="M462 60 L 480 32 L 500 56"
-            stroke="#2E2620" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+          <polygon points="0 0, 10 4, 0 8" fill="#2E2620"/>
+        </marker>
+      </defs>
+      <path d="M14 150 C 70 110, 150 200, 320 188 C 420 180, 462 88, 472 46"
+            stroke="#2E2620" stroke-width="4" stroke-linecap="round"
+            marker-end="url(#arrowhead)"/>
     </svg>
 
     <!-- Ancre du fan : positionnée en absolute au centre de la moitié droite -->
