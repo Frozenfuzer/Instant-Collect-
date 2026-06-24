@@ -373,7 +373,7 @@ if (boosterPack && boosterReveal){
    8) Apparitions au scroll (marquées) — ré-armées à chaque changement de page
    -------------------------------------------------------------------------- */
 let revealObserver = null;
-const REVEAL_SELECTOR = ".page.is-active .values .value, .page.is-active .step-mini, .page.is-active .produit-card, .page.is-active .concept-step-row, .page.is-active .feature-band, .page.is-active .polaroid, .page.is-active .faq-item, .page.is-active .section-header, .page.is-active .partenaire-header, .page.is-active .video-embed-wrap, .page.is-active .contact-card, .page.is-active .contact-form-wrap, .page.is-active .nostalgie-photo";
+const REVEAL_SELECTOR = ".page.is-active .values .value, .page.is-active .step-mini, .page.is-active .produit-card, .page.is-active .concept-step-row, .page.is-active .feature-band, .page.is-active .polaroid, .page.is-active .faq-item, .page.is-active .section-header, .page.is-active .partenaire-header, .page.is-active .video-embed-wrap, .page.is-active .contact-card, .page.is-active .contact-form-wrap, .page.is-active .nostalgie-photo, .page.is-active .concept-nostalgie-text";
 
 function setupReveal(){
   if (prefersReducedMotion) return;
