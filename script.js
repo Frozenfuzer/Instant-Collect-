@@ -533,3 +533,24 @@ function initCarousel(){
 document.addEventListener('DOMContentLoaded', function(){ initCarousel(); });
 
 if (typeof applyImages === "function") applyImages();
+
+/* --------------------------------------------------------------------------
+   FAQ accordion — délégation d'événement, fonctionne après rendu de page
+   -------------------------------------------------------------------------- */
+document.addEventListener('click', function(e) {
+  const btn = e.target.closest('.faq-question');
+  if (!btn) return;
+  const card = btn.closest('[data-faq-card]');
+  if (!card) return;
+  const isOpen = card.classList.contains('is-open');
+  // Ferme toutes les cartes ouvertes
+  document.querySelectorAll('[data-faq-card].is-open').forEach(function(c) {
+    c.classList.remove('is-open');
+    c.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+  });
+  // Ouvre la carte cliquée si elle était fermée
+  if (!isOpen) {
+    card.classList.add('is-open');
+    btn.setAttribute('aria-expanded', 'true');
+  }
+});
