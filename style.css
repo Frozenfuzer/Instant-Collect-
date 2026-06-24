@@ -675,61 +675,61 @@ img[data-img]::before, img[data-img]::after{ content:none; }
   max-width: 42ch;
 }
 
-/* ── Collage de photos ── */
+/* ── Collage de photos — grid, pas de débordement ── */
 .concept-nostalgie-collage {
-  position: relative;
-  height: 400px;
+  display: grid;
+  grid-template-columns: 55% 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.7rem;
+  padding: 1.2rem 0.4rem;
+  align-items: stretch;
 }
 
 .nostalgie-photo {
-  position: absolute;
   background-size: cover;
   background-position: center;
-  border-radius: 5px;
-  box-shadow: 0 12px 32px rgba(46,38,32,0.18), 0 2px 6px rgba(46,38,32,0.08);
-  /* état initial pour l'animation (avant is-visible) */
+  border-radius: 6px;
+  box-shadow: 0 10px 28px rgba(46,38,32,0.16), 0 2px 5px rgba(46,38,32,0.07);
+  position: relative;            /* nécessaire pour les pseudo-éléments data-img */
+  /* ── animation : état initial ── */
   opacity: 0;
   transition: opacity 0.65s cubic-bezier(.2,.7,.3,1), transform 0.65s cubic-bezier(.2,.7,.3,1);
 }
 
+/* Photo gauche — grande, couvre les 2 lignes */
 .nostalgie-photo-1 {
-  width: 58%;
-  aspect-ratio: 4/3;
-  top: 0;
-  right: 6%;
-  transform: rotate(3deg) translateY(36px);
+  grid-column: 1;
+  grid-row: 1 / 3;
+  aspect-ratio: 2/3;
+  transform: rotate(-4deg) translateX(-8px);
   transition-delay: 0s;
-  z-index: 1;
 }
+
+/* Photo haut-droite */
 .nostalgie-photo-2 {
-  width: 54%;
-  aspect-ratio: 4/3;
-  top: 28%;
-  left: 0;
-  transform: rotate(-5deg) translateX(-36px);
+  grid-column: 2;
+  grid-row: 1;
+  transform: rotate(3deg) translateY(-8px);
   transition-delay: 0.14s;
-  z-index: 3;
 }
+
+/* Photo bas-droite */
 .nostalgie-photo-3 {
-  width: 52%;
-  aspect-ratio: 4/3;
-  bottom: 0;
-  right: 0;
-  transform: rotate(4deg) translateY(36px);
+  grid-column: 2;
+  grid-row: 2;
+  transform: rotate(-2deg) translateY(8px);
   transition-delay: 0.28s;
-  z-index: 2;
 }
 
-/* ── État visible (ajouté par le scroll-reveal) ── */
-.nostalgie-photo-1.is-visible { opacity: 1; transform: rotate(3deg) translateY(0); }
-.nostalgie-photo-2.is-visible { opacity: 1; transform: rotate(-5deg) translateX(0); }
-.nostalgie-photo-3.is-visible { opacity: 1; transform: rotate(4deg) translateY(0); }
+/* ── État visible ── */
+.nostalgie-photo-1.is-visible { opacity: 1; transform: rotate(-4deg) translateX(0); }
+.nostalgie-photo-2.is-visible { opacity: 1; transform: rotate(3deg)  translateY(0); }
+.nostalgie-photo-3.is-visible { opacity: 1; transform: rotate(-2deg) translateY(0); }
 
-/* Hover léger : légère mise en avant */
+/* Hover : soulève la photo */
 .nostalgie-photo:hover {
-  z-index: 10;
-  box-shadow: 0 18px 44px rgba(46,38,32,0.24);
-  transition: box-shadow 0.25s ease, z-index 0s;
+  box-shadow: 0 18px 40px rgba(46,38,32,0.22);
+  transition: box-shadow 0.22s ease;
 }
 
 /* ── Mobile ── */
@@ -739,7 +739,8 @@ img[data-img]::before, img[data-img]::after{ content:none; }
     gap: 2rem;
   }
   .concept-nostalgie-collage {
-    height: 260px;
+    max-width: 400px;
+    margin: 0 auto;
   }
   .concept-nostalgie-title {
     font-size: 1.35rem;
