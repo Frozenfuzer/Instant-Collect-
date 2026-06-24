@@ -388,7 +388,7 @@ img[data-img]::before, img[data-img]::after{ content:none; }
   pointer-events:none;
 }
 .booster-pack-hint{
-  position:relative; z-index:2; margin-bottom: 1rem;
+  position:relative; z-index:2; margin-bottom: -1.5rem;
   font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:600;
   color: var(--white);
   background: rgba(46,38,32,0.55); padding: 0.45rem 0.9rem; border-radius: 999px;
@@ -636,7 +636,7 @@ img[data-img]::before, img[data-img]::after{ content:none; }
   position: relative;
   max-width: 1080px;
   margin: clamp(1rem, 3vw, 2rem) auto 0;
-  padding: clamp(1.5rem, 3vw, 2.5rem) clamp(2rem, 5vw, 4rem) clamp(16rem, 22vw, 20rem) clamp(0.5rem, 2vw, 1.5rem);
+  padding: clamp(1.5rem, 3vw, 2.5rem) clamp(2rem, 5vw, 4rem) clamp(9rem, 12vw, 11rem) clamp(0.5rem, 2vw, 1.5rem);
   min-height: 320px;
   display: grid;
   grid-template-columns: 46% 54%;
@@ -681,7 +681,7 @@ img[data-img]::before, img[data-img]::after{ content:none; }
 .concept-nostalgie-arrow {
   position: absolute;
   left: 9%;
-  bottom: 8rem;
+  bottom: -1.5rem;
   width: 60%;
   transform: rotate(-1deg);
   height: 120px;
