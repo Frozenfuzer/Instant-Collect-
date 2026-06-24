@@ -388,7 +388,7 @@ img[data-img]::before, img[data-img]::after{ content:none; }
   pointer-events:none;
 }
 .booster-pack-hint{
-  position:relative; z-index:2; margin-bottom: -1.5rem;
+  position:relative; z-index:2; margin-bottom: -0.4rem;
   font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:600;
   color: var(--white);
   background: rgba(46,38,32,0.55); padding: 0.45rem 0.9rem; border-radius: 999px;
@@ -681,7 +681,7 @@ img[data-img]::before, img[data-img]::after{ content:none; }
 .concept-nostalgie-arrow {
   position: absolute;
   left: 9%;
-  bottom: -1.5rem;
+  bottom: -0.4rem;
   width: 60%;
   transform: rotate(-1deg);
   height: 120px;
