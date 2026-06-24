@@ -681,7 +681,7 @@ img[data-img]::before, img[data-img]::after{ content:none; }
 .concept-nostalgie-arrow {
   position: absolute;
   left: 9%;
-  bottom: 2rem;
+  bottom: 4.5rem;
   width: 60%;
   height: 120px;
   opacity: 0.92;
