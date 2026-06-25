@@ -220,7 +220,7 @@ function positionConceptArrow() {
   const sRect = section.getBoundingClientRect();
 
   // 10px sous le dernier paragraphe, exprimé en top relatif à la section
-  arrow.style.top    = (pRect.bottom - sRect.top - 110) + "px";
+  arrow.style.top    = (pRect.bottom - sRect.top - 75) + "px";
   arrow.style.bottom = "auto";
 }
 
