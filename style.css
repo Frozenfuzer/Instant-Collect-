@@ -191,8 +191,7 @@ img[data-img]::before, img[data-img]::after{ content:none; }
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(46,38,32,0.08);
 }
-.nav-logo{ display:flex; align-items:center; }
-.nav-logo-img{ height: 48px; width: auto; display: block; filter: brightness(0); }
+.nav-logo{ display:flex; align-items:center; font-family: 'Railey', var(--font-display); font-size: 1.9rem; font-weight: normal; font-style: normal; color: var(--ink); }
 .nav-left{ display: flex; align-items: center; gap: 1.2rem; }
 .nav-phone{
   font-family: var(--font-ui);
