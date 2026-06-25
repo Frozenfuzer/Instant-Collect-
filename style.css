@@ -7,6 +7,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=League+Spartan:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap');
 
+@font-face {
+  font-family: 'Railey';
+  src: url('https://frozenfuzer.github.io/Instant-Collect-/assets/police/Railey-PersonalUse.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root{
   --kraft: #C9A876;
   --kraft-dark: #A8895E;
@@ -184,7 +191,7 @@ img[data-img]::before, img[data-img]::after{ content:none; }
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(46,38,32,0.08);
 }
-.nav-logo{ display:flex; align-items:center; font-family: var(--font-display); font-size: 1.9rem; font-weight: 700; font-style: normal; color: var(--ink); }
+.nav-logo{ display:flex; align-items:center; font-family: 'Railey', var(--font-display); font-size: 1.9rem; font-weight: normal; font-style: normal; color: var(--ink); }
 .nav-left{ display: flex; align-items: center; gap: 1.2rem; }
 .nav-phone{
   font-family: var(--font-ui);
