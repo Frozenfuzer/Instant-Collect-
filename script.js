@@ -200,9 +200,39 @@ function renderRoute(){
 
   // ré-arme les apparitions au scroll sur le contenu désormais visible
   setupReveal();
+
+  // Repositionne la flèche concept exactement 10px sous le texte
+  if (route === "concept") positionConceptArrow();
 }
 
 window.addEventListener("hashchange", renderRoute);
+
+/* --------------------------------------------------------------------------
+   Flèche concept — positionnement dynamique (indépendant des fonts)
+   -------------------------------------------------------------------------- */
+function positionConceptArrow() {
+  const lastP  = document.querySelector("#page-concept .concept-nostalgie-text p:last-of-type");
+  const arrow  = document.querySelector("#page-concept .concept-nostalgie-arrow");
+  const section = document.querySelector("#page-concept .concept-nostalgie");
+  if (!lastP || !arrow || !section) return;
+
+  const pRect = lastP.getBoundingClientRect();
+  const sRect = section.getBoundingClientRect();
+
+  // 10px sous le dernier paragraphe, exprimé en top relatif à la section
+  arrow.style.top    = (pRect.bottom - sRect.top + 10) + "px";
+  arrow.style.bottom = "auto";
+}
+
+// Applique aussi quand les fonts Google sont chargées (Work Sans change les mesures)
+if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(() => {
+    if (document.querySelector("#page-concept.is-active")) positionConceptArrow();
+  });
+}
+window.addEventListener("resize", () => {
+  if (document.querySelector("#page-concept.is-active")) positionConceptArrow();
+});
 
 /* --------------------------------------------------------------------------
    4b) Scroll en haut sur TOUT clic de lien hash (nav, footer, cartes…)
