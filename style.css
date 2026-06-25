@@ -31,7 +31,7 @@
   --radius-soft: 2px;
 }
 
-body[data-page="fete-des-meres"]{ --accent:#C46B4B; --accent-soft:#EFC9CB; --accent-dark:#A8543A; }
+body[data-page="fete-des-meres"]{ --accent:#D4728A; --accent-soft:#F5D5DC; --accent-dark:#B85A72; }
 body[data-page="saint-valentin"]{ --accent:#A8425A; --accent-soft:#F0D4D8; --accent-dark:#7E2F42; }
 body[data-page="king-jouet"]{ --accent:#2F6FA3; --accent-soft:#CFE3F0; --accent-dark:#234F75; }
 body[data-page="mariage"]{ --accent:#7A8B6F; --accent-soft:#E7E3D3; --accent-dark:#586049; }
