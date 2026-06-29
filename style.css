@@ -969,8 +969,10 @@ body[data-page="contact"]{ --accent: var(--terracotta); }
 }
 .contact-card:hover{ box-shadow: 0 6px 20px rgba(46,38,32,0.1); }
 .contact-card-icon{ font-size: 1.6rem; display:block; margin-bottom: 0.5rem; }
+.contact-card-icon--svg{ font-size: 0; line-height: 0; }
 .contact-card h3{ font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; }
 .contact-card p{ color: var(--ink-soft); font-size: 0.92rem; margin-bottom: 0.2rem; }
+.contact-card p a{ font-weight: 700; color: var(--terracotta); }
 .contact-card small{ font-size: 0.78rem; color: var(--ink-soft); opacity: 0.7; }
 .contact-insta-link{ color: var(--terracotta); font-weight: 600; font-size: 0.92rem; }
 .contact-insta-link:hover{ text-decoration: underline; }
@@ -1206,8 +1208,10 @@ body[data-page="contact"]{ --accent: var(--terracotta); }
 .contact-card{ background: var(--white); border: 1px solid rgba(46,38,32,0.1); border-radius: 4px; padding: 1.4rem 1.2rem; transition: box-shadow 0.25s; }
 .contact-card:hover{ box-shadow: 0 6px 20px rgba(46,38,32,0.1); }
 .contact-card-icon{ font-size: 1.6rem; display:block; margin-bottom: 0.5rem; }
+.contact-card-icon--svg{ font-size: 0; line-height: 0; }
 .contact-card h3{ font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; }
 .contact-card p{ color: var(--ink-soft); font-size: 0.92rem; margin-bottom: 0.2rem; }
+.contact-card p a{ font-weight: 700; color: var(--terracotta); }
 .contact-card small{ font-size: 0.78rem; color: var(--ink-soft); opacity: 0.7; }
 .contact-insta-link{ color: var(--terracotta); font-weight: 600; font-size: 0.92rem; }
 .contact-insta-link:hover{ text-decoration: underline; }
@@ -1291,7 +1295,7 @@ body[data-page="contact"]{ --accent: var(--terracotta); }
 
 /* ===================== CTA PARTENAIRES — fond sombre lisible ===================== */
 .cta-final-partenaires{
-  background: #4a3d35 !important;
+  background: var(--ink) !important;
 }
 .cta-final-partenaires .cta-final-title{
   color: #fff !important;
