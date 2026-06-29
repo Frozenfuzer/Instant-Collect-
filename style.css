@@ -1304,9 +1304,12 @@ body[data-page="contact"]{ --accent: var(--terracotta); }
   color: var(--ink);
   border: none;
   font-weight: 700;
+  box-shadow: 0 6px 16px rgba(46,38,32,0.18);
 }
 .btn-light:hover{
   background: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(46,38,32,0.22);
 }
 
 /* ===================== HERO PARTENAIRES — fond légèrement renforcé ===================== */
