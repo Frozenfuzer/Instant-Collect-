@@ -220,7 +220,7 @@ function positionConceptArrow() {
   const sRect = section.getBoundingClientRect();
 
   // 10px sous le dernier paragraphe, exprimé en top relatif à la section
-  arrow.style.top    = (pRect.bottom - sRect.top - 55) + "px";
+  arrow.style.top    = (pRect.bottom - sRect.top - 35) + "px";
   arrow.style.bottom = "auto";
 }
 
@@ -568,8 +568,7 @@ document.addEventListener('DOMContentLoaded', function(){ initCarousel(); });
 if (typeof applyImages === "function") applyImages();
 
 /* --------------------------------------------------------------------------
-   FAQ accordion — chaque carte se toggle indépendamment
-   Plusieurs questions peuvent rester ouvertes simultanément
+   FAQ accordion — délégation d'événement, fonctionne après rendu de page
    -------------------------------------------------------------------------- */
 document.addEventListener('click', function(e) {
   const btn = e.target.closest('.faq-question');
@@ -577,10 +576,13 @@ document.addEventListener('click', function(e) {
   const card = btn.closest('[data-faq-card]');
   if (!card) return;
   const isOpen = card.classList.contains('is-open');
-  if (isOpen) {
-    card.classList.remove('is-open');
-    btn.setAttribute('aria-expanded', 'false');
-  } else {
+  // Ferme toutes les cartes ouvertes
+  document.querySelectorAll('[data-faq-card].is-open').forEach(function(c) {
+    c.classList.remove('is-open');
+    c.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+  });
+  // Ouvre la carte cliquée si elle était fermée
+  if (!isOpen) {
     card.classList.add('is-open');
     btn.setAttribute('aria-expanded', 'true');
   }
