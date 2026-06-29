@@ -1473,3 +1473,26 @@ body[data-page="contact"]{ --accent: var(--terracotta); }
   color: var(--terracotta);
   text-decoration: underline;
 }
+
+/* ===================== FOOTER — LIENS LÉGAUX ===================== */
+.footer-legal{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+  order: 5;
+}
+.footer-legal a{
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+.footer-legal a:hover{ color: rgba(255,255,255,0.8); }
+.footer-legal-sep{
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.25);
+}
