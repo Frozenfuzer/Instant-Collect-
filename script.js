@@ -158,6 +158,7 @@ const ROUTES = {
   "jour-de-fete":   { title: "Jour de Fête ! — Instant Collecté",                     header: "full" },
   "partenaires":    { title: "Nos Partenaires — Instant Collecté",                     header: "full" },
   "mentions-legales": { title: "Mentions légales — Instant Collecté",                   header: "full" },
+  "cgv":              { title: "Conditions Générales de Vente — Instant Collecté",       header: "full" },
 };
 const DEFAULT_ROUTE = "accueil";
 
