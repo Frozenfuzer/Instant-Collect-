@@ -1431,3 +1431,45 @@ body[data-page="contact"]{ --accent: var(--terracotta); }
 
 /* ===================== TICKER HAUT — suppression ===================== */
 .page-ticker{ display: none; }
+
+/* ===================== PAGE MENTIONS LÉGALES ===================== */
+.hero-mentions{ background: var(--cream-warm); }
+.mentions-wrap{ padding: var(--section-pad) 1.5rem; background: var(--cream); }
+.mentions-content{
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.mentions-block h2{
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--ink);
+  margin-bottom: 0.7rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(46,38,32,0.12);
+}
+.mentions-block p{
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+  line-height: 1.7;
+  margin-bottom: 0.6rem;
+}
+.mentions-block ul{
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.mentions-block ul li{
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+.mentions-block a{
+  color: var(--terracotta);
+  text-decoration: underline;
+}
