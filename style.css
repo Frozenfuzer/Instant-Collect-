@@ -901,7 +901,7 @@ img[data-img]::before, img[data-img]::after{ content:none; }
 .footer-instagram:hover{ color: var(--terracotta); }
 .footer-mentions{ width:100%; text-align:center; font-size:0.8rem; color: rgba(255,255,255,0.45); margin-top:0.6rem; order:4; }
 .footer.footer-minimal .footer-nav{ display:none; }
-@media (min-width:760px){ .footer-mentions{ width:auto; margin-top:0; text-align:center; } }
+@media (min-width:760px){ .footer-mentions{ width:100%; margin-top:0.6rem; text-align:center; } }
 
 /* ===================== REVEAL AU SCROLL (plus marqué) ===================== */
 .reveal{ opacity:0; transform: translateY(34px); transition: opacity 0.7s cubic-bezier(.2,.7,.3,1), transform 0.7s cubic-bezier(.2,.7,.3,1); }
@@ -1482,16 +1482,17 @@ body[data-page="contact"]{ --accent: var(--terracotta); }
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  margin-top: 0.4rem;
+  margin-top: 0.5rem;
   order: 5;
 }
 .footer-legal a{
   font-size: 0.78rem;
-  color: rgba(255,255,255,0.45);
+  color: var(--terracotta);
   text-decoration: underline;
+  text-underline-offset: 2px;
   transition: color 0.2s ease;
 }
-.footer-legal a:hover{ color: rgba(255,255,255,0.8); }
+.footer-legal a:hover{ color: var(--rose-poudre); }
 .footer-legal-sep{
   font-size: 0.7rem;
   color: rgba(255,255,255,0.25);
