@@ -1291,7 +1291,7 @@ body[data-page="contact"]{ --accent: var(--terracotta); }
 
 /* ===================== CTA PARTENAIRES — fond sombre lisible ===================== */
 .cta-final-partenaires{
-  background: var(--ink) !important;
+  background: #4a3d35 !important;
 }
 .cta-final-partenaires .cta-final-title{
   color: #fff !important;
