@@ -157,6 +157,7 @@ const ROUTES = {
   "souvenir-ete":   { title: "Souvenir d'été (bientôt) — Instant Collecté",            header: "full" },
   "jour-de-fete":   { title: "Jour de Fête ! — Instant Collecté",                     header: "full" },
   "partenaires":    { title: "Nos Partenaires — Instant Collecté",                     header: "full" },
+  "mentions-legales": { title: "Mentions légales — Instant Collecté",                   header: "full" },
 };
 const DEFAULT_ROUTE = "accueil";
 
