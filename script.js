@@ -568,7 +568,8 @@ document.addEventListener('DOMContentLoaded', function(){ initCarousel(); });
 if (typeof applyImages === "function") applyImages();
 
 /* --------------------------------------------------------------------------
-   FAQ accordion — délégation d'événement, fonctionne après rendu de page
+   FAQ accordion — chaque carte se toggle indépendamment
+   Plusieurs questions peuvent rester ouvertes simultanément
    -------------------------------------------------------------------------- */
 document.addEventListener('click', function(e) {
   const btn = e.target.closest('.faq-question');
@@ -576,13 +577,10 @@ document.addEventListener('click', function(e) {
   const card = btn.closest('[data-faq-card]');
   if (!card) return;
   const isOpen = card.classList.contains('is-open');
-  // Ferme toutes les cartes ouvertes
-  document.querySelectorAll('[data-faq-card].is-open').forEach(function(c) {
-    c.classList.remove('is-open');
-    c.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-  });
-  // Ouvre la carte cliquée si elle était fermée
-  if (!isOpen) {
+  if (isOpen) {
+    card.classList.remove('is-open');
+    btn.setAttribute('aria-expanded', 'false');
+  } else {
     card.classList.add('is-open');
     btn.setAttribute('aria-expanded', 'true');
   }
