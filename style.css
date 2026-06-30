@@ -1444,7 +1444,7 @@ body[data-page="contact"]{ --accent: var(--terracotta); }
 }
 .mentions-block h2{
   font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   color: var(--ink);
   margin-bottom: 0.7rem;
   padding-bottom: 0.4rem;
