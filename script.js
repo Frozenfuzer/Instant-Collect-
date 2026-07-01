@@ -77,7 +77,7 @@ const IMAGES = {
   step1: "https://frozenfuzer.github.io/Instant-Collect-/assets/concept/Groupement%20de%20photo%20sur%20table.JPG",
   step2: "",
   step3: "https://frozenfuzer.github.io/Instant-Collect-/assets/concept/d%C3%A9couverte%20livret%20.PNG",
-  step4: "",
+  step4: "https://frozenfuzer.github.io/Instant-Collect-/assets/concept/IMG_9294.PNG",
 
   // King Jouet
   kingBooster: "", kingShop: "",
