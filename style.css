@@ -580,11 +580,11 @@ img[data-img]::before, img[data-img]::after{ content:none; }
 .boosters-fan-art{ height:100%; width:auto; max-width: clamp(130px,17vw,180px); display:block; object-fit:contain; filter: drop-shadow(0 14px 22px rgba(46,38,32,0.35)); }
 /* compense la marge transparente du visuel Été, cadré plus large que les 2 autres packs */
 .boosters-fan-item-1 .boosters-fan-art{ transform: scale(1.35); transform-origin: bottom center; }
-.boosters-fan-item-1{ transform: rotate(-9deg) translateY(0); margin-right:-1.8rem; z-index:1; }
+.boosters-fan-item-1{ transform: rotate(-9deg) translateY(28px); margin-right:-1.8rem; z-index:1; }
 .boosters-fan-item-2{ transform: translateY(0); z-index:2; }
 .boosters-fan-item-3{ transform: rotate(9deg) translateY(0); margin-left:-1.8rem; z-index:1; }
 @media (hover:hover) and (pointer:fine){
-  .boosters-fan-item-1:hover{ transform: rotate(-9deg) translateY(-14px) scale(1.05); z-index:3; }
+  .boosters-fan-item-1:hover{ transform: rotate(-9deg) translateY(14px) scale(1.05); z-index:3; }
   .boosters-fan-item-2:hover{ transform: translateY(-14px) scale(1.05); z-index:3; }
   .boosters-fan-item-3:hover{ transform: rotate(9deg) translateY(-14px) scale(1.05); z-index:3; }
 }
