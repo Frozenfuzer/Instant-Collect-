@@ -232,7 +232,7 @@ function positionConceptArrow() {
   const sRect = section.getBoundingClientRect();
 
   // 10px sous le dernier paragraphe, exprimé en top relatif à la section
-  arrow.style.top    = (pRect.bottom - sRect.top - 45) + "px";
+  arrow.style.top    = (pRect.bottom - sRect.top - 38) + "px";
   arrow.style.bottom = "auto";
 }
 
