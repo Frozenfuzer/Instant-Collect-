@@ -1095,9 +1095,15 @@
       <div class="contact-form-wrap">
         <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
           <input type="hidden" name="_subject" value="Nouvelle demande — Instant Collecté">
-          <div class="form-row">
-            <label class="form-label" for="cf-name">Votre nom <span aria-hidden="true">*</span></label>
-            <input class="form-input" type="text" id="cf-name" name="name" placeholder="Prénom Nom" required autocomplete="name">
+          <div class="form-row form-row-split">
+            <div class="form-field">
+              <label class="form-label" for="cf-firstname">Prénom <span aria-hidden="true">*</span></label>
+              <input class="form-input" type="text" id="cf-firstname" name="firstname" placeholder="Prénom" required autocomplete="given-name">
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="cf-lastname">Nom <span aria-hidden="true">*</span></label>
+              <input class="form-input" type="text" id="cf-lastname" name="lastname" placeholder="Nom" required autocomplete="family-name">
+            </div>
           </div>
           <div class="form-row">
             <label class="form-label" for="cf-email">Email <span aria-hidden="true">*</span></label>
