@@ -643,7 +643,8 @@ img[data-img]::before, img[data-img]::after{ content:none; }
 .concept-steps-full{ max-width: 1020px; margin: 0 auto; padding: 0 1.5rem var(--section-pad); display:flex; flex-direction:column; gap: clamp(2.5rem, 5vw, 4rem); }
 .concept-step-row{ display:grid; grid-template-columns: 1fr 1fr; align-items:center; gap: 2.5rem; }
 .concept-step-content{ display:flex; flex-direction:column; gap:0.5rem; }
-.concept-step-media{ aspect-ratio: 4/3; min-height: 220px; border-radius: 10px; }
+.concept-step-media{ aspect-ratio: 4/3; min-height: 220px; border-radius: 10px; overflow: hidden; transition: transform 0.4s ease; }
+.concept-step-media:hover{ transform: scale(1.05); }
 .step-num{ font-family: var(--font-display); font-size: 2.4rem; color: var(--accent); font-weight:700; }
 .concept-step-content h3{ font-size: 1.4rem; font-weight:700; }
 .concept-step-content p{ color: var(--ink-soft); max-width: 44ch; }
