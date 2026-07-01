@@ -561,28 +561,29 @@ img[data-img]::before, img[data-img]::after{ content:none; }
 
 /* ===================== VITRINE BOOSTERS (accueil) — "une collection à découvrir" ===================== */
 .boosters-showcase{
-  background: var(--kraft);
-  background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0 2px, transparent 2px 38px);
-  padding: clamp(3rem,7vw,5rem) 1.5rem clamp(3.5rem,8vw,5.5rem);
+  background: var(--cream-warm);
+  background-image: repeating-linear-gradient(45deg, rgba(46,38,32,0.025) 0 2px, transparent 2px 38px);
+  padding: clamp(2.2rem,4.5vw,3.2rem) 1.5rem clamp(2.6rem,5vw,3.6rem);
   overflow: hidden;
+  position: relative;
 }
-.boosters-showcase-inner{ max-width: 1100px; margin:0 auto; text-align:center; }
-.boosters-showcase-eyebrow{
-  font-size:0.78rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:600;
-  color: var(--ink); opacity:0.7;
-}
+.boosters-showcase-inner{ max-width: 1100px; margin:0 auto; text-align:center; position:relative; z-index:1; }
+.boosters-showcase-deco{ position:absolute; pointer-events:none; z-index:0; }
+.boosters-showcase-deco-left{ width: clamp(50px,6vw,80px); top:12%; left: clamp(1rem,6vw,7rem); animation: leafFloat 7s ease-in-out infinite; }
+.boosters-showcase-deco-right{ width: clamp(38px,5vw,58px); bottom:14%; right: clamp(1.2rem,7vw,8rem); animation: flowerSpin 16s linear infinite; }
+@media (max-width: 700px){ .boosters-showcase-deco{ display:none; } }
 .boosters-showcase-title{
   font-family: var(--font-body); font-weight:700; font-size: clamp(1.8rem,4vw,2.6rem);
-  color: var(--ink); margin-top:0.4rem;
+  color: var(--ink);
 }
-.boosters-showcase-title-script{ font-family: var(--font-display); font-weight:600; color: var(--white); font-size:1.15em; }
+.boosters-showcase-title-script{ font-family: var(--font-display); font-weight:600; color: var(--terracotta); font-size:1.15em; }
 
 .boosters-fan{
   display:flex; align-items:flex-end; justify-content:center;
-  margin-top: clamp(2.2rem,5vw,3.4rem);
+  margin-top: clamp(1.8rem,4vw,2.6rem);
 }
-.boosters-fan-item{ width: clamp(130px,17vw,180px); transition: transform 0.35s cubic-bezier(.2,.8,.3,1); }
-.boosters-fan-art{ width:100%; display:block; filter: drop-shadow(0 14px 22px rgba(46,38,32,0.35)); }
+.boosters-fan-item{ height: clamp(170px,22vw,240px); transition: transform 0.35s cubic-bezier(.2,.8,.3,1); }
+.boosters-fan-art{ height:100%; width:auto; max-width: clamp(130px,17vw,180px); display:block; object-fit:contain; filter: drop-shadow(0 14px 22px rgba(46,38,32,0.35)); }
 .boosters-fan-item-1{ transform: rotate(-9deg) translateY(14px); margin-right:-1.8rem; z-index:1; }
 .boosters-fan-item-2{ transform: translateY(-16px); z-index:2; }
 .boosters-fan-item-3{ transform: rotate(9deg) translateY(14px); margin-left:-1.8rem; z-index:1; }
@@ -592,7 +593,8 @@ img[data-img]::before, img[data-img]::after{ content:none; }
   .boosters-fan-item-3:hover{ transform: rotate(9deg) translateY(-2px) scale(1.05); z-index:3; }
 }
 @media (max-width: 620px){
-  .boosters-fan-item{ width: clamp(100px,26vw,140px); }
+  .boosters-fan-item{ height: clamp(130px,32vw,170px); }
+  .boosters-fan-art{ max-width: clamp(100px,26vw,140px); }
   .boosters-fan-item-1{ margin-right:-1rem; }
   .boosters-fan-item-3{ margin-left:-1rem; }
 }
