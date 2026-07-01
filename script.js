@@ -69,7 +69,9 @@ const IMAGES = {
   screenshot5: "https://frozenfuzer.github.io/Instant-Collect-/assets/accueil/PHOTO%2015.jpg",
 
   // Concept — intro nostalgie (collage photos, à remplir dès que les images sont dans assets/concept/)
-  conceptPhoto1: "", conceptPhoto2: "", conceptPhoto3: "",
+  conceptPhoto1: "https://frozenfuzer.github.io/Instant-Collect-/assets/concept/Photo%201%20carte%20concept.PNG",
+  conceptPhoto2: "https://frozenfuzer.github.io/Instant-Collect-/assets/concept/Photo%202%20carte%20concept.PNG",
+  conceptPhoto3: "https://frozenfuzer.github.io/Instant-Collect-/assets/concept/Photo%203%20carte%20concept.PNG",
 
   // Concept — 4 étapes
   step1: "https://frozenfuzer.github.io/Instant-Collect-/assets/concept/Groupement%20de%20photo%20sur%20table.JPG",
