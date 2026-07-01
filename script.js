@@ -87,6 +87,9 @@ const IMAGES = {
   meresPoster: "",
   meresLivret: "",
 
+  // Mariage
+  mariageHero: "",
+
   // Saint-Valentin
   valentinHero: "", valentinBooster: "", valentinLivret: "",
 };
