@@ -478,10 +478,11 @@ renderRoute();
         else throw new Error();
       } catch { if (errorBox) errorBox.hidden = false; }
     } else {
-      const n=(form.querySelector("#cf-name")||{value:""}).value, em=(form.querySelector("#cf-email")||{value:""}).value;
+      const fn=(form.querySelector("#cf-firstname")||{value:""}).value, ln=(form.querySelector("#cf-lastname")||{value:""}).value;
+      const em=(form.querySelector("#cf-email")||{value:""}).value;
       const ph=(form.querySelector("#cf-phone")||{value:""}).value, tp=(form.querySelector("#cf-type")||{value:""}).value;
       const ms=(form.querySelector("#cf-message")||{value:""}).value;
-      const body=`Nom : ${n}\nEmail : ${em}\nTéléphone : ${ph||"–"}\nType : ${tp}\n\nMessage :\n${ms}`;
+      const body=`Nom : ${fn} ${ln}\nEmail : ${em}\nTéléphone : ${ph||"–"}\nType : ${tp}\n\nMessage :\n${ms}`;
       window.location.href=`mailto:[À REMPLACER]?subject=Nouvelle demande — Instant Collecté&body=${encodeURIComponent(body)}`;
       if (successBox) successBox.hidden = false;
     }
