@@ -81,7 +81,9 @@ const IMAGES = {
   kingBooster: "", kingShop: "",
 
   // Fête des Mères
-  meresHero: "", meresPoster: "", meresLivret: "",
+  meresHero: "https://frozenfuzer.github.io/Instant-Collect-/assets/edition/livret%20maelle.JPG",
+  meresPoster: "",
+  meresLivret: "",
 
   // Saint-Valentin
   valentinHero: "", valentinBooster: "", valentinLivret: "",
