@@ -72,7 +72,10 @@ const IMAGES = {
   conceptPhoto1: "", conceptPhoto2: "", conceptPhoto3: "",
 
   // Concept — 4 étapes
-  step1: "", step2: "", step3: "", step4: "",
+  step1: "https://frozenfuzer.github.io/Instant-Collect-/assets/concept/Groupement%20de%20photo%20sur%20table.JPG",
+  step2: "",
+  step3: "",
+  step4: "https://frozenfuzer.github.io/Instant-Collect-/assets/concept/d%C3%A9couverte%20livret%20.PNG",
 
   // King Jouet
   kingBooster: "", kingShop: "",
