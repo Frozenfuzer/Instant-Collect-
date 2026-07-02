@@ -534,6 +534,7 @@ img[data-img]::before, img[data-img]::after{ content:none; }
 
 .edition-title{ font-family: var(--font-body); font-weight: 700; font-size: clamp(2.1rem, 5vw, 3.2rem); color: var(--ink); line-height:1.2; }
 .edition-title-script{ font-family: var(--font-display); font-weight:600; color: var(--accent); font-size: 1.1em; }
+.hero-realisations .edition-title-script{ font-size: 1.5em; }
 .co-brand-lockup{ font-family: var(--font-display); font-size: 1.6rem; font-weight:700; color: var(--ink); }
 .co-brand-x{ color: var(--accent); margin: 0 0.2rem; }
 
